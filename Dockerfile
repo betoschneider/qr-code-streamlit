@@ -16,8 +16,9 @@ COPY pyproject.toml uv.lock ./
 
 # Instalar dependências (sem o projeto em si, se for o caso, ou use --no-install-project)
 # Usando sync para garantir que o ambiente seja idêntico ao lockfile
-RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-install-project --no-dev
+# RUN --mount=type=cache,target=/root/.cache/uv \
+#     uv sync --frozen --no-install-project --no-dev
+RUN uv sync --frozen --no-install-project --no-dev
 
 # Copiar arquivos da aplicação
 COPY app.py .
