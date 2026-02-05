@@ -31,11 +31,21 @@ uv sync
 
 ### Executar a Aplicação
 
+#### Localmente
 ```bash
 streamlit run app.py
 ```
 
 A aplicação será aberta no seu navegador padrão em `http://localhost:8501`.
+
+#### Com Docker
+Para rodar a aplicação usando Docker, utilize o comando:
+
+```bash
+docker-compose up --build -d
+```
+
+A aplicação estará disponível em `http://localhost:8515`.
 
 ## 📋 Dependências
 
